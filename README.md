@@ -4,7 +4,7 @@ An end-to-end fraud detection system: raw transaction data is cleaned and
 loaded into Postgres, a classifier is trained to handle severe class
 imbalance, and predictions are served through a live dashboard.
 
-**Live dashboard:** _TODO: add Streamlit Community Cloud link after deploying_
+**Live dashboard:** https://fraud-detection-pipeline-c4fhbsnomw8ufqpcc7sgzz.streamlit.app/
 
 ## Architecture
 
