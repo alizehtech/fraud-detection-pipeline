@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# secrets
+.env
+
+# data (raw dataset is large + not ours to redistribute)
+data/*.csv
+
+# trained artifacts are large / regenerable — keep only the final one we deploy with
+models/*.joblib
+!models/model.joblib
+!models/scaler.joblib
+
+# notebook checkpoints
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
