@@ -97,8 +97,20 @@ exposes this as a slider so the tradeoff is explorable rather than baked in.
 
 ## Results
 
-_TODO: fill in after running train_model.py — Random Forest test-set
-precision/recall/PR-AUC._
+Trained on 283,726 cleaned transactions (473 fraud, 0.1667%), 80/20
+stratified train/test split, SMOTE applied to the training set only.
+
+| Metric | Logistic Regression | Random Forest |
+|---|---|---|
+| Precision (fraud) | 0.05 | **0.92** |
+| Recall (fraud) | 0.87 | 0.76 |
+| PR-AUC | 0.68 | **0.80** |
+| ROC-AUC | 0.96 | 0.97 |
+
+Random Forest is the deployed model: on the held-out test set it flags 72 of
+95 fraud cases with only 6 false positives, versus logistic regression's 83
+caught fraud cases buried in 1,482 false alerts. `models/model.joblib` and
+`models/scaler.joblib` are the artifacts `src/app.py` loads.
 
 ## Deployment
 
